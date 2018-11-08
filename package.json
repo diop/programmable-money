@@ -1,0 +1,26 @@
+{
+  "name": "programmable-money",
+  "version": "1.0.0",
+  "description": "Ethereum Programming Meetup and Workshop",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "smart",
+    "contracts",
+    "solidity",
+    "blockchain",
+    "crypto",
+    "currency",
+    "truffle",
+    "infura",
+    "web3js"
+  ],
+  "author": "Fodé Diop",
+  "license": "MIT"
+}
