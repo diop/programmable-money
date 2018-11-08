@@ -1,4 +1,4 @@
-## Ethereum Blockchain Programming Notes and Curriculum
+## Ethereum Blockchain Programming
 
 
 
