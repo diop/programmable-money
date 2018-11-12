@@ -2,15 +2,19 @@
 by Fodé Diop
 
 # Motivation
-This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every monday for 6 consecutive weeks except for when it falls on a holidays.
+```
+This project is heavily influenced by PyClass from Noisebridge. 
+The PM workshop will run every monday for 6 consecutive weeks,
+except for when it falls on a holiday.
+```
 
-* First Monday: Introduction to Solidity and Smart Contracts - Deploy your own Coin.
-* Second Monday: Ethereum Blockchain Transactions Fundamentals.
-* Third Monday: Web3JS aka enough Javascript to be dangerous.
-* forth Monday: Writing Secure Smart Contracts.
-* Fifth Monday: Dapp Frontends and Deployments.
-* Sixth Monday: What to build?
-* Monday Break: Special Guests
+* First Monday: **Introduction to Solidity and Smart Contracts - Deploy your own Coin**
+* Second Monday: **Ethereum Blockchain Transactions Fundamentals**
+* Third Monday: **Web3JS aka enough Javascript to be dangerous**
+* Fourth Monday: **Writing Secure Smart Contracts**
+* Fifth Monday: **Dapp Frontends and Deployments**
+* Sixth Monday: **What to build?**
+* Monday Break: **Special Guests**
 
 ### Solidity and Smart Contracts
 [Ethereum EIPs](https://github.com/ethereum/EIPs)
