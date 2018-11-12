@@ -1,6 +1,9 @@
 # The Ethereum Blockchain Curriculum
 by Fodé Diop
 
+# Motivation
+This project is heavily influenced by PyClass from Noisebridge.
+
 ### Solidity and Smart Contracts
 * [ERC-20 EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
 * [ERC-721 EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
@@ -404,14 +407,14 @@ web3.eth.getTransactionCount(acct1, (err, txCount) => {
 * Using Ganache
 
 ```js
-$ npm install ethereumjs-tx
-$ const Web3 = require('web3')
-$ const web3 = new Web3('http://127.0.0.1:7545')
-$ const acct1 = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'
-$ const acct2 = '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
-$ web3.eth.sendTransaction({ from: acct1, to: acct, value: web3.utils.toWei('1', 'ether') })
-$ web3.eth.getBalance(acct1)
-$ web3.eth.personal.unlockAccount --> On Geth
+> npm install ethereumjs-tx
+> const Web3 = require('web3')
+> const web3 = new Web3('http://127.0.0.1:7545')
+> const acct1 = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'
+> const acct2 = '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
+> web3.eth.sendTransaction({ from: acct1, to: acct, value: web3.utils.toWei('1', 'ether') })
+> web3.eth.getBalance(acct1)
+> web3.eth.personal.unlockAccount --> On Geth
 ```
 
 + When you send transaction on Ganache, those accounts are unlocked. You need to sign your transaction first before you can
@@ -420,8 +423,8 @@ broadcast them.
 + Keep the private keys in envirnment variables for security.
 
 ```js
-$ const privateKey1 = Buffer.from(process.env.PRIVATE_KEY_1)
-$ const privateKey2 = Buffer.from(process.env.PRIVATE_KEY_2)
+> const privateKey1 = Buffer.from(process.env.PRIVATE_KEY_1)
+> const privateKey2 = Buffer.from(process.env.PRIVATE_KEY_2)
 ```
 
 ### Writing Secure Smart Contracts
@@ -438,51 +441,60 @@ $ const privateKey2 = Buffer.from(process.env.PRIVATE_KEY_2)
 + To play with Web3 via NodeJS:
 
 ```js
-$ const Web3 = require('web3')
-$ const url = 'https://mainnet.infura.io/CTNrMRz6lyyxOxddWG7y'
-$ const web3 = new Web3(url)
-$ const address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e'
-$ web3.eth.getBalance(address, (err, bal) => { balance = bal})
-$ web3.utils.fromWei(balance, 'ether')
-$ balance
-$ web3.eth.accounts.create()
+> const Web3 = require('web3')
+> const url = 'https://mainnet.infura.io/CTNrMRz6lyyxOxddWG7y'
+> const web3 = new Web3(url)
+> const address = '0x742d35Cc6634C0532925a3b844Bc454e4438f44e'
+> web3.eth.getBalance(address, (err, bal) => { balance = bal})
+> web3.utils.fromWei(balance, 'ether')
+> balance
+> web3.eth.accounts.create()
 ```
 
 + To get the balance from your local Ganache instance:
 
 ```js
-$ web3.eth.getBalance('GANACHE_ACCOUNT_ADDRESS', (err, wei) => {balance = web3.utils.fromWei(wei, 'ether')})
-$ balance 
+> web3.eth.getBalance('GANACHE_ACCOUNT_ADDRESS', (err, wei) => {balance = web3.utils.fromWei(wei, 'ether')})
+> balance 
 ```
 
 + ``` web3.eth.Contract ``` creates an abstraction of our Smart Contract we can abstract with in Javascript.
 + to interact with a contract on the main Blockchain. Same steps to connect to infura plus:
 
 ```js
-$ const abi = ABI_FROM_ETHERSCAN
-$ abi
-$ const contractAddress = CONTRACT_ADDRESS
-$ const contract = new web3.eth.Contract(abi, contractAddress)
-$ contract
-$ contract.methods
-$ contracts.methods.name().call((err, result) => { console.log(result) })
-$ contracts.methods.symbol().call((err, result) => { console.log(result) })
-$ contract.methods.totalSupply().call((err, result) => { console.log(result) })
-$ const accountAddress = ACCOUNT_ADDRESS_FROM_HOLDERS_LIST
+> const abi = ABI_FROM_ETHERSCAN
+> abi
+> const contractAddress = CONTRACT_ADDRESS
+> const contract = new web3.eth.Contract(abi, contractAddress)
+> contract
+> contract.methods
+> contracts.methods.name().call((err, result) => { console.log(result) })
+> contracts.methods.symbol().call((err, result) => { console.log(result) })
+> contract.methods.totalSupply().call((err, result) => { console.log(result) })
+> const accountAddress = ACCOUNT_ADDRESS_FROM_HOLDERS_LIST
 ```
 
-### ICO Contracts
-
-
 ### Dapp Frontends
-[Truffle Frameworks](https://truffleframework.com/truffle)  
+[Truffle Frameworks](https://truffleframework.com/truffle)
 
-### Ipfs
+### What to build?
+[0x Relayers](https://blog.0xproject.com/18-ideas-for-0x-relayers-in-2018-80a1498b955f)
+[Dharma Relayer](https://relayer.dharma.io/)
+
+### Distributed Storage with Ipfs
 [IPFS](https://ipfs.io/)
 
 ### Protocols
 + [0x](https://0xproject.com/)
 + [Dharma](https://dharma.io/)
+
+### Resources
+* [Program the Blockchain](https://programtheblockchain.com/)
+* [Crypto Zombies](https://cryptozombies.io/)
+* [Zastrin](https://www.zastrin.com/)
+* [Dapp University](http://www.dappuniversity.com/)
+* [Beginners Guide to Blockchain Programming](https://hackernoon.com/a-beginners-guide-to-blockchain-programming-4913d16eae31)
+
 
 ### Glossary: Blockchain
 + See also [https://bitcoin.org/en/vocabulary](https://bitcoin.org/en/vocabulary)
@@ -534,7 +546,7 @@ $ const accountAddress = ACCOUNT_ADDRESS_FROM_HOLDERS_LIST
 
 * **Ether**: the primary internal cryptographic token of the Ethereum network. Ether is used to pay transaction and computation fees for Ethereum transactions.
 
-* **Ga**s: a measurement roughly equivalent to computational steps. Every transaction is required to include a gas limit and a fee that it is willing to pay per gas; miners have the choice of including the transaction and collecting the fee or not. If the total number of gas used by the computation spawned by the transaction, including the original message and any sub-messages that may be triggered, is less than or equal to the gas limit, then the transaction processes. If the total gas exceeds the gas limit, then all changes are reverted, except that the transaction is still valid and the fee can still be collected by the miner. Every operation has a gas expenditure; for most operations it is 1, although some expensive operations fave expenditures up to 100 and a transaction itself has an expenditure of 500.
+* **Gas**: a measurement roughly equivalent to computational steps. Every transaction is required to include a gas limit and a fee that it is willing to pay per gas; miners have the choice of including the transaction and collecting the fee or not. If the total number of gas used by the computation spawned by the transaction, including the original message and any sub-messages that may be triggered, is less than or equal to the gas limit, then the transaction processes. If the total gas exceeds the gas limit, then all changes are reverted, except that the transaction is still valid and the fee can still be collected by the miner. Every operation has a gas expenditure; for most operations it is 1, although some expensive operations fave expenditures up to 100 and a transaction itself has an expenditure of 500.
 
 ### Glossary: Cryptography
 * **Computational infeasibility**: a process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out. Generally, 280 computational steps is considered the lower bound for computational infeasibility.
