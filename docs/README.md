@@ -2,9 +2,22 @@
 by Fodé Diop
 
 # Motivation
-This project is heavily influenced by PyClass from Noisebridge.
+```
+This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every monday for 6 consecutive weeks except for when it falls on a holidays.
+```
+* First Monday: Introduction to Solidity and Smart Contracts - Deploy your own Coin.
+* Second Monday: Ethereum Blockchain Transactions Fundamentals.
+* Third Monday: Web3JS aka enough Javascript to be dangerous.
+* forth Monday: Writing Secure Smart Contracts.
+* Fifth Monday: Dapp Frontends and Deployments.
+* Sixth Monday: What to build?
+* Monday Break: Special Guest
 
 ### Solidity and Smart Contracts
+[Ethereum EIPs](https://github.com/ethereum/EIPs)
+```
+**EIP** stands for **Ethereum Improvement Proposal**. An EIP is a design document providing information to the Ethereum community, or describing a new feature for Ethereum or its processes or environment.
+```
 * [ERC-20 EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
 * [ERC-721 EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
 
