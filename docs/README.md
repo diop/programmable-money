@@ -3,15 +3,17 @@ by Fodé Diop
 
 # Motivation
 ```
-This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every monday for 6 consecutive weeks except for when it falls on a holidays.
+This project is heavily influenced by PyClass from Noisebridge. 
+The PM workshop will run every Monday for 6 consecutive weeks, except for when it falls on a holiday.
 ```
-* First Monday: Introduction to Solidity and Smart Contracts - Deploy your own Coin.
-* Second Monday: Ethereum Blockchain Transactions Fundamentals.
-* Third Monday: Web3JS aka enough Javascript to be dangerous.
-* forth Monday: Writing Secure Smart Contracts.
-* Fifth Monday: Dapp Frontends and Deployments.
-* Sixth Monday: What to build?
-* Monday Break: Special Guest
+
+* First Monday: **Introduction to Solidity and Smart Contracts - Deploy your own Coin**
+* Second Monday: **Ethereum Blockchain Transactions Fundamentals**
+* Third Monday: **Web3JS aka enough Javascript to be dangerous**
+* Fourth Monday: **Writing Secure Smart Contracts**
+* Fifth Monday: **Dapp Frontends, Deployments, and a dash more Javascript**
+* Sixth Monday: **What to build?**
+* Monday Break: **Special Guests**
 
 ### Solidity and Smart Contracts
 [Ethereum EIPs](https://github.com/ethereum/EIPs)
@@ -420,7 +422,8 @@ web3.eth.getTransactionCount(acct1, (err, txCount) => {
 * Using Ganache
 
 ```js
-> npm install ethereumjs-tx
+$ npm install ethereumjs-tx
+$ node
 > const Web3 = require('web3')
 > const web3 = new Web3('http://127.0.0.1:7545')
 > const acct1 = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'
@@ -436,6 +439,7 @@ broadcast them.
 + Keep the private keys in envirnment variables for security.
 
 ```js
+$ node
 > const privateKey1 = Buffer.from(process.env.PRIVATE_KEY_1)
 > const privateKey2 = Buffer.from(process.env.PRIVATE_KEY_2)
 ```
@@ -454,6 +458,7 @@ broadcast them.
 + To play with Web3 via NodeJS:
 
 ```js
+$ node
 > const Web3 = require('web3')
 > const url = 'https://mainnet.infura.io/CTNrMRz6lyyxOxddWG7y'
 > const web3 = new Web3(url)
@@ -467,6 +472,7 @@ broadcast them.
 + To get the balance from your local Ganache instance:
 
 ```js
+$ node 
 > web3.eth.getBalance('GANACHE_ACCOUNT_ADDRESS', (err, wei) => {balance = web3.utils.fromWei(wei, 'ether')})
 > balance 
 ```
@@ -475,6 +481,7 @@ broadcast them.
 + to interact with a contract on the main Blockchain. Same steps to connect to infura plus:
 
 ```js
+$ node 
 > const abi = ABI_FROM_ETHERSCAN
 > abi
 > const contractAddress = CONTRACT_ADDRESS
