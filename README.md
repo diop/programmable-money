@@ -1,6 +1,9 @@
 # The Ethereum Blockchain Curriculum
 by Fodé Diop
 
+# Motivation
+This project is heavily influenced by PyClass from Noisebridge.
+
 ### Solidity and Smart Contracts
 * [ERC-20 EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
 * [ERC-721 EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
@@ -478,12 +481,20 @@ broadcast them.
 [0x Relayers](https://blog.0xproject.com/18-ideas-for-0x-relayers-in-2018-80a1498b955f)
 [Dharma Relayer](https://relayer.dharma.io/)
 
-### Ipfs
+### Distributed Storage with Ipfs
 [IPFS](https://ipfs.io/)
 
 ### Protocols
 + [0x](https://0xproject.com/)
 + [Dharma](https://dharma.io/)
+
+### Resources
+* [Program the Blockchain](https://programtheblockchain.com/)
+* [Crypto Zombies](https://cryptozombies.io/)
+* [Zastrin](https://www.zastrin.com/)
+* [Dapp University](http://www.dappuniversity.com/)
+* [Beginners Guide to Blockchain Programming](https://hackernoon.com/a-beginners-guide-to-blockchain-programming-4913d16eae31)
+
 
 ### Glossary: Blockchain
 + See also [https://bitcoin.org/en/vocabulary](https://bitcoin.org/en/vocabulary)
@@ -535,7 +546,7 @@ broadcast them.
 
 * **Ether**: the primary internal cryptographic token of the Ethereum network. Ether is used to pay transaction and computation fees for Ethereum transactions.
 
-* **Ga**s: a measurement roughly equivalent to computational steps. Every transaction is required to include a gas limit and a fee that it is willing to pay per gas; miners have the choice of including the transaction and collecting the fee or not. If the total number of gas used by the computation spawned by the transaction, including the original message and any sub-messages that may be triggered, is less than or equal to the gas limit, then the transaction processes. If the total gas exceeds the gas limit, then all changes are reverted, except that the transaction is still valid and the fee can still be collected by the miner. Every operation has a gas expenditure; for most operations it is 1, although some expensive operations fave expenditures up to 100 and a transaction itself has an expenditure of 500.
+* **Gas**: a measurement roughly equivalent to computational steps. Every transaction is required to include a gas limit and a fee that it is willing to pay per gas; miners have the choice of including the transaction and collecting the fee or not. If the total number of gas used by the computation spawned by the transaction, including the original message and any sub-messages that may be triggered, is less than or equal to the gas limit, then the transaction processes. If the total gas exceeds the gas limit, then all changes are reverted, except that the transaction is still valid and the fee can still be collected by the miner. Every operation has a gas expenditure; for most operations it is 1, although some expensive operations fave expenditures up to 100 and a transaction itself has an expenditure of 500.
 
 ### Glossary: Cryptography
 * **Computational infeasibility**: a process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out. Generally, 280 computational steps is considered the lower bound for computational infeasibility.
