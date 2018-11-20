@@ -2,7 +2,7 @@
 by Fodé Diop
 
 ## Motivation
-This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every Monday for 6 consecutive weeks, except for when it falls on a holiday.
+This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every Monday for 6 consecutive weeks, except for when it falls on a holiday. 
 
 * First Monday: **Introduction to Solidity and Smart Contracts - Deploy your own Coin**
 * Second Monday: **Ethereum Blockchain Transactions Fundamentals**
@@ -396,7 +396,7 @@ interface ERC721TokenReceiver {
 + [Infura Blockchain as a Service](https://infura.io/)
 + [Etherscan Accounts](https://etherscan.io/accounts)
 
-+ It's absolutely crucial to know how transactions work in Ethereum.
++ It's absolutely crucial to know how transactions work in Ethereum. Everytime your trigger a write on the Ethereum Blockchain it costs money. The write cost gas. 
 
 * Build a transaction
 
@@ -416,6 +416,10 @@ web3.eth.getTransactionCount(acct1, (err, txCount) => {
 })
 ```
 * Using Ganache
+    + All these accounts are unlocked!!!
+    + To use a node which you do not trust, sign transactions locally before submitting to node.
+    + When you send transaction on Ganache, those accounts are unlocked. You need to sign your transaction first before you can broadcast them.
+
 
 ```js
 $ npm install ethereumjs-tx
@@ -425,14 +429,11 @@ $ node
 > const acct1 = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'
 > const acct2 = '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
 > web3.eth.sendTransaction({ from: acct1, to: acct, value: web3.utils.toWei('1', 'ether') })
-> web3.eth.getBalance(acct1)
+> web3.eth.getBalance(acct1, (err, result) => { console.log(result)})
 > web3.eth.personal.unlockAccount --> On Geth
 ```
 
-+ When you send transaction on Ganache, those accounts are unlocked. You need to sign your transaction first before you can
-broadcast them.
-
-+ Keep the private keys in envirnment variables for security.
++ Keep the private keys in environment variables for security.
 
 ```js
 $ node
@@ -510,10 +511,12 @@ $ node
 * [Zastrin](https://www.zastrin.com/)
 * [Dapp University](http://www.dappuniversity.com/)
 * [Beginners Guide to Blockchain Programming](https://hackernoon.com/a-beginners-guide-to-blockchain-programming-4913d16eae31)
+* [Ethereum Development with Golang](https://goethereumbook.org/)
+* [Ethereum Builders](https://ethereumbuilders.gitbooks.io/guide/content/en/)
 
 
 ### Glossary: Blockchain
-+ See also [https://bitcoin.org/en/vocabulary](https://bitcoin.org/en/vocabulary)
++ See also [Ethereum Builders Glossary](https://ethereumbuilders.gitbooks.io/guide/content/en/glossary.html)
 
 * **Address**: an address is essentially the representation of a public key belonging to a particular user; for example, the address associated with the private key given above is cd2a3d9f938e13cd947ec05abc7fe734df8dd826. Note that in practice, the address is technically the hash of a public key, but for simplicity it's better to ignore this distinction.
 

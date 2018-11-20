@@ -2,7 +2,7 @@
 by Fodé Diop
 
 ## Motivation
-This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every Monday for 6 consecutive weeks, except for when it falls on a holiday.
+This project is heavily influenced by PyClass from Noisebridge. The PM workshop will run every Monday for 6 consecutive weeks, except for when it falls on a holiday. 
 
 * First Monday: **Introduction to Solidity and Smart Contracts - Deploy your own Coin**
 * Second Monday: **Ethereum Blockchain Transactions Fundamentals**
@@ -510,10 +510,12 @@ $ node
 * [Zastrin](https://www.zastrin.com/)
 * [Dapp University](http://www.dappuniversity.com/)
 * [Beginners Guide to Blockchain Programming](https://hackernoon.com/a-beginners-guide-to-blockchain-programming-4913d16eae31)
+* [Ethereum Development with Golang](https://goethereumbook.org/)
+* [Ethereum Builders](https://ethereumbuilders.gitbooks.io/guide/content/en/)
 
 
 ### Glossary: Blockchain
-+ See also [https://bitcoin.org/en/vocabulary](https://bitcoin.org/en/vocabulary)
++ See also [Ethereum Builders Glossary](https://ethereumbuilders.gitbooks.io/guide/content/en/glossary.html)
 
 * **Address**: an address is essentially the representation of a public key belonging to a particular user; for example, the address associated with the private key given above is cd2a3d9f938e13cd947ec05abc7fe734df8dd826. Note that in practice, the address is technically the hash of a public key, but for simplicity it's better to ignore this distinction.
 
