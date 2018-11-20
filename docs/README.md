@@ -396,7 +396,7 @@ interface ERC721TokenReceiver {
 + [Infura Blockchain as a Service](https://infura.io/)
 + [Etherscan Accounts](https://etherscan.io/accounts)
 
-+ It's absolutely crucial to know how transactions work in Ethereum.
++ It's absolutely crucial to know how transactions work in Ethereum. Everytime your trigger a write on the Ethereum Blockchain it costs money. The write cost gas. 
 
 * Build a transaction
 
@@ -416,6 +416,10 @@ web3.eth.getTransactionCount(acct1, (err, txCount) => {
 })
 ```
 * Using Ganache
+    + All these accounts are unlocked!!!
+    + To use a node which you do not trust, sign transactions locally before submitting to node.
+    + When you send transaction on Ganache, those accounts are unlocked. You need to sign your transaction first before you can broadcast them.
+
 
 ```js
 $ npm install ethereumjs-tx
@@ -425,14 +429,11 @@ $ node
 > const acct1 = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'
 > const acct2 = '0xf17f52151EbEF6C7334FAD080c5704D77216b732'
 > web3.eth.sendTransaction({ from: acct1, to: acct, value: web3.utils.toWei('1', 'ether') })
-> web3.eth.getBalance(acct1)
+> web3.eth.getBalance(acct1, (err, result) => { console.log(result)})
 > web3.eth.personal.unlockAccount --> On Geth
 ```
 
-+ When you send transaction on Ganache, those accounts are unlocked. You need to sign your transaction first before you can
-broadcast them.
-
-+ Keep the private keys in envirnment variables for security.
++ Keep the private keys in environment variables for security.
 
 ```js
 $ node
@@ -494,8 +495,9 @@ $ node
 [Truffle Frameworks](https://truffleframework.com/truffle)
 
 ### What to build?
-[0x Relayers](https://blog.0xproject.com/18-ideas-for-0x-relayers-in-2018-80a1498b955f)
-[Dharma Relayer](https://relayer.dharma.io/)
++ [0x Launch Kit](https://0xproject.com/launch-kit)
++ [0x Relayers](https://blog.0xproject.com/18-ideas-for-0x-relayers-in-2018-80a1498b955f)
++ [Dharma Relayer](https://relayer.dharma.io/)
 
 ### Distributed Storage with Ipfs
 [IPFS](https://ipfs.io/)
